@@ -1,38 +1,174 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  max-width: 700px;
+  margin: 2rem auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Utility */
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.lg {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.m-1 {
+  margin: 1.5rem 1rem 4rem 1rem;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+.Smsg {
+  font-size: 14px;
+  color: rgb(20, 163, 20);
+}
+.Emsg {
+  font-size: 14px;
+  color: orangered;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  color: #fff;
+}
+
+a:hover,
+:focus {
+  color: #000;
+}
+
+/* Main CSS Start Here */
+.card-light {
+  background-color: #fff;
+  color: #333;
+  padding: 1rem 0.2rem;
+  border: 5px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 70%);
+}
+
+li {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  width: 100%;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 70%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in;
+  text-transform: capitalize;
+}
+li:nth-child(odd) {
+  background-color: #444;
+}
+
+li:hover {
+  transform: scale(1.008);
+}
+
+.task-done {
+  background-color: green;
+  text-decoration: line-through;
+  transition: all 0.3s ease-out;
+}
+.task-done:nth-child(odd) {
+  background-color: green;
+}
+.task-done:hover {
+  background-color: green;
+  text-decoration: line-through;
+}
+
+label,
+.btn-add,
+.btn-delete,
+.btn-delete-all {
+  cursor: pointer;
+}
+
+input[type="text"],
+.btn-add,
+.btn-delete,
+.btn-delete-all {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 60%;
+  margin: 10px 10px;
+  padding: 0 4px;
+  font-size: 1.4rem;
+  color: #333;
+  border-bottom: 2px solid grey;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+  border-bottom: 3px solid grey;
+}
+
+.btn-add {
+  padding: 10px 30px;
+  background: #047aed;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.btn-add:hover,
+.btn-add:focus {
+  background: #1b89f5;
+  transform: scale(0.98);
+}
+
+.btn-delete,
+.btn-delete-all {
+  padding: 10px 20px;
+  background: red;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease-out;
+  text-transform: uppercase;
+}
+
+.btn-delete:hover,
+:focus,
+.btn-delete-all:hover,
+:focus {
+  background: orangered;
+  transform: scale(0.97);
+}
+
+.lists {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* align-items: center; */
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 
+.text-center {
+  text-align: center;
+} */
+p {
+  text-align: center;
 }
